@@ -1,8 +1,27 @@
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ projects }) {
+function ProjectList({ projects, selectedYear }) {
   if (projects.length === 0) {
-    return <p className="project-list__empty">등록된 프로젝트가 없습니다.</p>;
+    return (
+      <div className="project-list__empty">
+        {selectedYear === 14 ? (
+          <>
+            <strong className="project-list__empty-title">
+              아직 등록된 프로젝트가 없습니다.
+            </strong>
+
+            <span className="project-list__empty-text">
+              14기 운영진, 아기사자들의 멋진 아이디어가 곧 현실이 될 예정입니다.
+              기대해 주세요!
+            </span>
+          </>
+        ) : (
+          <strong className="project-list__empty-title">
+            등록된 프로젝트가 없습니다.
+          </strong>
+        )}
+      </div>
+    );
   }
 
   return (

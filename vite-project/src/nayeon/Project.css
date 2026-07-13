@@ -1,13 +1,4 @@
 /* =========================
-   스크롤바로 인한 화면 밀림 방지
-========================= */
-
-html {
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
-}
-
-/* =========================
    Pretendard 폰트 등록
 ========================= */
 
@@ -326,6 +317,7 @@ html {
   letter-spacing: -0.025em;
   word-break: keep-all;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .project-card__description {
@@ -339,6 +331,7 @@ html {
   letter-spacing: -0.015em;
   word-break: keep-all;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 /* =========================
