@@ -368,7 +368,7 @@ const PROJECTS = [
   {
     title: "POOL:US",
     subtitle: "2023 영암축전",
-    image: "/clonecoding/project/2023영암축전poolus.png",
+    image: "/clonecoding/project/2023영암축전poolus.png",
     link: "https://poolus.sku-sku.com/",
   },
 ];
