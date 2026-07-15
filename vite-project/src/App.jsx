@@ -1,7 +1,7 @@
-import React from "react";
+import HyunwooPage from "./hyunwoo/HyunwooPage";
 
-const App = () => {
-  return <div>Hello</div>;
-};
+function App() {
+  return <HyunwooPage />;
+}
 
 export default App;
