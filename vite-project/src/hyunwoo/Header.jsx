@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 import logo from "./images/likelionLogo.png";
 import insta from "./images/insta.png";
@@ -12,14 +13,18 @@ function Header() {
       <div className={styles["header-inner"]}>
         {/* LEFT */}
         <div className={styles["header-left"]}>
-          <a href="/" className={styles.logo}>
+          <Link to="/" className={styles.logo}>
             <img src={logo} alt="Logo" />
             <p>LIKELION SKU</p>
-          </a>
+          </Link>
 
           <nav className={styles.nav}>
-            <div className={styles["menu-title"]}>PROJECT</div>
-            <div className={styles["menu-title"]}>TEAM</div>
+            <Link to="/project" className={styles["menu-title"]}>
+              PROJECT
+            </Link>
+            <Link to="/team" className={styles["menu-title"]}>
+              TEAM
+            </Link>
             <div className={styles["menu-title"]}>COMMUNITY</div>
 
             <div className={styles["mega-menu"]}>
