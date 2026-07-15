@@ -203,7 +203,7 @@ function Tracks() {
   const selectedTrack = TRACKS.find((t) => t.id === selectedId);
 
   return (
-    <div className="bg-[#121212] py-[8%] flex flex-col items-center">
+    <div className="bg-[#121212] pt-[10%] pb-[8%] flex flex-col items-center">
       <motion.div
         className="flex flex-col text-center justify-center"
         initial="hidden"
@@ -534,7 +534,8 @@ const MainPage = () => {
       </div>
 
       {/* 3가지 방향성 */}
-      <div className="relative sm:min-h-screen h-[250px] w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      {/* 3가지 방향성 wrapper */}
+      <div className="relative flex flex-col justify-between h-full text-white items-center py-10 sm:py-24">
         <div className="absolute inset-0 bg-[url('/clonecoding/main/Main2.jpeg')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black opacity-80" />
         </div>
@@ -602,7 +603,7 @@ const MainPage = () => {
       <ProgramIntro />
 
       {/* PROGRAM info */}
-      <div className="px-4 sm:px-8 md:px-16 lg:px-14 xl:px-18 bg-[#1B1B1B] sm:py-20 py-12 space-y-20">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-14 xl:px-18 bg-[#1B1B1B] sm:pt-20 sm:pb-32 pt-12 pb-20 space-y-20">
         <p className="text-[#9ABFFF] fontSB text-center text-[9px] sm:text-[14px] md:text-[18px]">
           @2026 PROGRAM info
         </p>
