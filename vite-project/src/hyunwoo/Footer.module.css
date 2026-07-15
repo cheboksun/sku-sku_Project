@@ -1,0 +1,231 @@
+/* =========================
+        FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  background: #000000;
+  color: white;
+  padding: 64px 48px 8px;
+  margin-top: 0;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+/* ------------------------
+        위 메뉴
+------------------------ */
+
+.footer-top {
+  width: 100%;
+  padding-bottom: 64px;
+  border-bottom: 1px solid #202020;
+}
+
+.footer-menu {
+  display: flex;
+  padding-left: 112px;
+}
+
+.footer-menu h6 {
+  color: #2d5abb;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 112px 16px 0px;
+}
+
+.footer-menu p {
+  color: #b0b0b0;
+  font-size: 16px;
+  margin: 24px 0;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.footer-menu p:hover {
+  color: white;
+}
+
+/* ------------------------
+      아래 영역
+------------------------ */
+
+.footer-bottom {
+  width: 100%;
+
+  padding: 40px 0px 40px 112px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* 왼쪽 */
+
+.footer-left {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.contact h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-left: 44px;
+}
+
+.info p {
+  color: #b0b0b0;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.divider {
+  width: 0.5px;
+  height: 40px;
+  background: #202020;
+  margin: 35px 70px 60px 60px;
+}
+
+/* ------------------------
+        CONTACT
+------------------------ */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  display: flex;
+  gap: 22px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+
+  background: white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.icon:hover {
+  background: #e8e8e8;
+  transform: translateY(-2px);
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* ------------------------
+      오른쪽
+------------------------ */
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.top-btn {
+  border: none;
+  background: transparent;
+
+  color: #b0b0b0;
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 22px;
+  margin-top: 20px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.top-btn:hover {
+  color: white;
+}
+
+.footer-right p:first-of-type {
+  color: #4f4f4f;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.footer-right p:last-of-type {
+  color: #4f4f4f;
+  font-size: 12px;
+}
+
+/* ------------------------
+        반응형
+------------------------ */
+
+@media (max-width: 1200px) {
+  .footer-menu {
+    gap: 90px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .footer-right {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 80px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    width: 94%;
+  }
+
+  .footer-menu {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .footer-menu h6 {
+    font-size: 16px;
+  }
+
+  .footer-menu p {
+    font-size: 16px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .divider {
+    display: none;
+  }
+}

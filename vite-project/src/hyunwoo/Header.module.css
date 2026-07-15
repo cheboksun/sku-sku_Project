@@ -1,0 +1,452 @@
+/* ===================================
+   HEADER
+=================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 77px;
+  overflow: visible;
+
+  background: #000;
+  border-bottom: 1px solid rgb(113, 113, 113);
+
+  z-index: 999;
+}
+
+.header-inner {
+  max-width: 1520px;
+  height: 77px;
+
+  margin: 0 auto;
+  padding: 20px 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===================================
+   LEFT
+=================================== */
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* ===================================
+   LOGO
+=================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  text-decoration: none;
+
+  margin-right: 48px;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+}
+
+.logo p {
+  color: #3b79ff;
+  font-size: 21px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* ===================================
+   NAV
+=================================== */
+
+.nav {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 64px;
+
+  height: 77px;
+}
+
+.menu-title {
+  text-align: center;
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.nav-item {
+  position: relative;
+
+  width: 90px;
+  height: 77px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item > a {
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  transition: 0.25s;
+
+  white-space: nowrap;
+}
+
+.nav-item > a:hover {
+  opacity: 0.8;
+}
+
+/* ===================================
+   RIGHT
+=================================== */
+
+.header-right {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+/* ===================================
+   SNS
+=================================== */
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 16px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.header:hover .social {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social img {
+  width: 28px;
+  height: 28px;
+}
+
+/* ===================================
+   CYBER BUTTON
+=================================== */
+
+.campus-btn {
+  width: 150px;
+  height: 35.5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #2d5abb;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 8px 16px;
+
+  margin-right: 16px;
+
+  cursor: pointer;
+}
+
+.campus-btn img {
+  width: 16px;
+  height: 16px;
+
+  margin-right: 8px;
+
+  flex-shrink: 0;
+}
+
+.campus-btn span {
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===================================
+   GOOGLE BUTTON
+=================================== */
+
+.google-btn {
+  width: 173px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+
+  padding: 8px 16px;
+
+  cursor: pointer;
+}
+
+.google-btn img {
+  width: 16px;
+  height: 16px;
+
+  margin-right: 8px;
+
+  flex-shrink: 0;
+}
+
+.google-btn span {
+  color: #000;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+/* ===================================
+   DROPDOWN
+=================================== */
+
+.dropdown {
+  position: absolute;
+
+  top: 77px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90px;
+
+  padding-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: transparent;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 20;
+}
+/* PROJECT, TEAM, COMMUNITY 각각 hover 시 */
+
+.header:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 드롭다운 항목 */
+
+.dropdown a {
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: #121212;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  padding: 12px 0;
+
+  transition: 0.2s;
+}
+
+.dropdown a:hover {
+  background: #f5f5f5;
+}
+
+/* ===================================
+   DROPDOWN COLUMN ALIGN
+=================================== */
+
+.nav-item:nth-child(1) .dropdown {
+  left: 50%;
+}
+
+.nav-item:nth-child(2) .dropdown {
+  left: 50%;
+}
+
+.nav-item:nth-child(3) .dropdown {
+  left: 50%;
+}
+
+/* ===================================
+   HEADER HOVER
+=================================== */
+
+.header:hover {
+  background: #fff;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.header:hover .nav-item > a {
+  color: #fff;
+}
+
+/* ===================================
+   BUTTON HOVER
+=================================== */
+
+.campus-btn {
+  transition: 0.2s;
+}
+
+.campus-btn:hover {
+  background: #234ca3;
+}
+
+.google-btn {
+  transition: 0.2s;
+}
+
+.google-btn:hover {
+  background: #f8f8f8;
+}
+
+/* ===================================
+   SNS HOVER
+=================================== */
+
+.social img {
+  transition: 0.2s;
+}
+
+.social img:hover {
+  transform: scale(1.08);
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1200px) {
+  .nav {
+    gap: 42px;
+  }
+
+  .logo {
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+}
+
+.header::after {
+  content: "";
+
+  position: absolute;
+  top: 77px;
+  left: 0;
+
+  width: 100%;
+  height: 0;
+
+  background: #fff;
+
+  transition: 0.1s;
+
+  z-index: -1;
+}
+
+.header:hover::after {
+  height: 210px;
+}
+
+.mega-menu {
+  position: absolute;
+
+  top: 77px;
+  left: -15px;
+
+  width: 370px;
+
+  display: flex;
+
+  column-gap: 34px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.25s;
+
+  z-index: 100;
+}
+
+.header:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-column {
+  width: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mega-column a {
+  text-decoration: none;
+
+  color: #121212;
+
+  font-size: 16px;
+
+  padding: 12px 0;
+}
+
+.header:hover .menu-title {
+  color: #121212;
+}
+
+.header:hover .logo p {
+  color: #121212;
+}

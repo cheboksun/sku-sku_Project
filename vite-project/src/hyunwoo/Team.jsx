@@ -1,4 +1,4 @@
-import "./Team.css";
+import styles from "./Team.module.css";
 import { useState } from "react";
 
 import jo from "./images/조승민.png";
@@ -200,21 +200,21 @@ export default function Team() {
   const teams = tab === 14 ? team14 : team13;
 
   return (
-    <section className="team">
-      <div className="team-container">
-        <p className="team-sub">LIKELION</p>
-        <h1 className="team-title">TEAM</h1>
+    <section className={styles.team}>
+      <div className={styles["team-container"]}>
+        <p className={styles["team-sub"]}>LIKELION</p>
+        <h1 className={styles["team-title"]}>TEAM</h1>
 
-        <div className="tabs">
+        <div className={styles.tabs}>
           <button
-            className={tab === 14 ? "active" : ""}
+            className={tab === 14 ? styles.active : ""}
             onClick={() => setTab(14)}
           >
             14기
           </button>
 
           <button
-            className={tab === 13 ? "active" : ""}
+            className={tab === 13 ? styles.active : ""}
             onClick={() => setTab(13)}
           >
             13기
@@ -224,18 +224,18 @@ export default function Team() {
           <button>11기</button>
         </div>
 
-        <div className="top-row">
+        <div className={styles["top-row"]}>
           {teams.slice(0, 2).map((team, index) => (
-            <div className="team-section" key={index}>
+            <div className={styles["team-section"]} key={index}>
               <h2>{team.title}</h2>
 
-              <div className="card-wrapper">
-                <div className="member-card">
+              <div className={styles["card-wrapper"]}>
+                <div className={styles["member-card"]}>
                   {team.members.map((member, idx) => (
-                    <div className="member" key={idx}>
+                    <div className={styles.member} key={idx}>
                       <img src={member.image} alt={member.name} />
 
-                      <div className="member-info">
+                      <div className={styles["member-info"]}>
                         <h3>
                           {member.name}
                           <span>{member.role}</span>
@@ -251,16 +251,16 @@ export default function Team() {
         </div>
 
         {teams.slice(2).map((team, index) => (
-          <div className="team-section" key={index + 2}>
+          <div className={styles["team-section"]} key={index + 2}>
             <h2>{team.title}</h2>
 
-            <div className="card-wrapper">
-              <div className="member-card">
+            <div className={styles["card-wrapper"]}>
+              <div className={styles["member-card"]}>
                 {team.members.map((member, idx) => (
-                  <div className="member" key={idx}>
+                  <div className={styles.member} key={idx}>
                     <img src={member.image} alt={member.name} />
 
-                    <div className="member-info">
+                    <div className={styles["member-info"]}>
                       <h3>
                         {member.name}
                         <span>{member.role}</span>

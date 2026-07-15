@@ -1,4 +1,4 @@
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 import insta from "./images/instagram.png";
 import kakao from "./images/kakaotalk.png";
@@ -6,10 +6,10 @@ import mail from "./images/mail.png";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-top">
-          <div className="footer-menu">
+    <footer className={styles.footer}>
+      <div className={styles["footer-container"]}>
+        <div className={styles["footer-top"]}>
+          <div className={styles["footer-menu"]}>
             <div>
               <h6>PROJECT</h6>
               <p>14기</p>
@@ -33,9 +33,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="footer-left">
-            <div className="info">
+        <div className={styles["footer-bottom"]}>
+          <div className={styles["footer-left"]}>
+            <div className={styles.info}>
               <h4>INFO</h4>
 
               <p>멋쟁이사자처럼 성결대학교 | 대표자 조승민</p>
@@ -51,29 +51,29 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="divider"></div>
+            <div className={styles.divider}></div>
 
-            <div className="contact">
+            <div className={styles.contact}>
               <h4>CONTACT</h4>
 
-              <div className="icons">
-                <div className="icon">
+              <div className={styles.icons}>
+                <div className={styles.icon}>
                   <img src={insta} alt="instagram" />
                 </div>
 
-                <div className="icon">
+                <div className={styles.icon}>
                   <img src={kakao} alt="kakao" />
                 </div>
 
-                <div className="icon">
+                <div className={styles.icon}>
                   <img src={mail} alt="mail" />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="footer-right">
-            <button className="top-btn">TOP ▲</button>
+          <div className={styles["footer-right"]}>
+            <button className={styles["top-btn"]}>TOP ▲</button>
 
             <p>SKU LIKELION 14th Edition</p>
 
